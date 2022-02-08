@@ -7,7 +7,7 @@ Sole purpose of this application is to simplify the process of keeping up to dat
 In detail: 
 
 When the 'First Run' flag is set as true, the application will ask for the User's email and password - that will be used for sending the notification mail. While email address itself is stored in json, in plain text, the password is being stored inside system's keyring service (via python's keyring module).
-Each time the application is executed it will scrape all threads from the first page of a steam forum, convert every thread's latest post date (from '5 Feb @ 7:44am' to '2022-02-05 07:44:00'), compare it, and if there are any new posts - the appliaction will format an email message with notification.
+Each time the application is executed it will scrape all threads from the first page of a steam forum, convert every thread's latest post date (from '5 Feb @ 7:44am' to '2022-02-05 07:44:00'), compare it, and if there are any new posts - the appliaction will format and send (via smtp) an email message with notification.
 
 ## Further development
 As this application has been written with a small scope in mind, I don't personally intend on expanding upon it's features. 
